@@ -90,21 +90,6 @@
 </script>
 <!-- HTML -->
 <div id="galerie" class="galerie"></div>
-
-<script>
-function chargerImages(dossier, count) {
-  const container = document.querySelector('.galerie');
-  for (let i = 1; i <= count; i++) {
-    const img = document.createElement('img');
-    img.src = `${dossier}/${dossier}${i}.jpg`; // ex: "images/images1.jpg"
-    img.alt = `${dossier} ${i}`;
-    container.appendChild(img);
-  }
-}
-chargerImages('atelier', 10);
-chargerImages('seminaire', 4);
-chargerImages('formation', 4);
-</script>
 <body>
 
   <header>
@@ -139,7 +124,20 @@ chargerImages('formation', 4);
   <section id="realisations" data-aos="zoom-in">
   <section id="galerie">
   <h2>Nos Réalisations</h2>
-
+<script>
+function chargerImages(dossier, count) {
+  const container = document.querySelector('.galerie');
+  for (let i = 1; i <= count; i++) {
+    const img = document.createElement('img');
+    img.src = `${dossier}/${dossier}${i}.jpg`; // ex: "images/images1.jpg"
+    img.alt = `${dossier} ${i}`;
+    container.appendChild(img);
+  }
+}
+chargerImages('atelier', 10);
+chargerImages('seminaire', 4);
+chargerImages('formation', 4);
+</script>
 <div class="gallery-buttons" style="text-align: center; margin-bottom: 20px;">
   <button onclick="showGallery('atelier')">📸 Atelier</button>
   <button onclick="showGallery('seminaire')">🎓 Séminaire</button>
