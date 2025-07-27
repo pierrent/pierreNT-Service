@@ -140,7 +140,7 @@
       <h2>Nos Réalisations</h2>
 
       <div class="galerie-buttons">
-        <button onclick="showGallery('atelier', 10)">📸 Atelier</button>
+        <button onclick="showGallery('atelier', 8)">📸 Atelier</button>
         <button onclick="showGallery('seminaire', 4)">🎓 Séminaire</button>
         <button onclick="showGallery('formation', 4)">💼 Formation</button>
       </div>
@@ -166,7 +166,7 @@
     function showGallery(type) {
   const gallery = document.getElementById("gallery");
   gallery.innerHTML = ""; 
-  for (let i = 1; i <= 10; i++) {
+  for (let i = 1; i <= 6; i++) {
     const img = document.createElement("img");
     img.src = `${type}${i}.jpg`; // ex : atelier1.jpg, formation2.jpg, seminaire3.jpg
     img.alt = `${type} image ${i}`;
