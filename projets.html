@@ -89,12 +89,12 @@
   });
 </script>
 <script>
-function chargerImages(dossier, count) {
-  const container = document.querySelector(`#${dossier} .galerie`);
+function chargerImages(/pierrent-service/images/, count) {
+  const container = /pierrent-service/images/.querySelector(`#${/pierrent-service/images/} .galerie`);
   for (let i = 1; i <= count; i++) {
-    const img = document.createElement('img');
-    img.src = `${dossier}/${dossier}${i}.jpg`;
-    img.alt = `${dossier} ${i}`;
+    const img = /pierrent-service/images/.createElement('img');
+    img.src = `${/pierrent-service/images/}/${/pierrent-service/images/}${i}.jpg`;
+    img.alt = `${/pierrent-service/images/} ${i}`;
     container.appendChild(img);
   }
 }
