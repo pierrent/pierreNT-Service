@@ -6,8 +6,50 @@
   <title>PierreNt Service – ACCUEIL</title>
   <link rel="stylesheet" href="style.css" />
   <link rel="icon" href="value.jpg" type="image/png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <style>
-    /* Style résumé (tu peux garder ton CSS existant) */
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+      background-color: #0056b3;
+      color: white;
+      position: relative;
+      z-index: 2;
+    }
+
+    header img {
+      height: 50px;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 15px;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+    }
+
+    nav ul li a:hover {
+      text-decoration: underline;
+    }
+
+    section {
+      padding: 20px;
+    }
+
     .galerie-buttons {
       text-align: center;
       margin: 20px 0;
@@ -42,6 +84,27 @@
       border-radius: 10px;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     }
+
+    footer {
+      background: #222;
+      color: white;
+      padding: 15px;
+      text-align: center;
+    }
+
+    .social-icons {
+      text-align: center;
+      margin-top: 10px;
+    }
+
+    .social-icons a {
+      color: #0056b3;
+      margin: 0 10px;
+    }
+
+    .social-icons a:hover {
+      color: #003d80;
+    }
   </style>
 </head>
 
@@ -62,7 +125,15 @@
   <main>
     <section>
       <h2>À propos de nous</h2>
-      <p>PierreNt Service est une entreprise spécialisée dans... (ton texte)</p>
+      <p>
+        PierreNt Service est une entreprise spécialisée dans le renforcement de capacité :
+        formations en informatique (bureautique, digital numérique, conception et programmation),
+        gestion de projets, assistance juridique et services bureautiques.
+      </p>
+      <p>
+        Notre mission est d'apporter des solutions concrètes et accessibles pour renforcer
+        les compétences, faciliter les démarches administratives et offrir un accompagnement juridique fiable.
+      </p>
     </section>
 
     <section id="galerie">
@@ -80,16 +151,29 @@
     <section id="reseaux-sociaux">
       <h2>Retrouvons-nous sur les réseaux</h2>
       <div class="social-icons">
-        <a href="https://web.facebook.com/carichoix" target="_blank">
-          <i class="fab fa-facebook fa-2x"></i>
-        </a>
-        <a href="https://www.linkedin.com/company/pierrent-service" target="_blank">
-          <i class="fab fa-linkedin fa-2x"></i>
-        </a>
+        <a href="https://web.facebook.com/carichoix" target="_blank"><i class="fab fa-facebook fa-2x"></i></a>
+        <a href="https://www.linkedin.com/company/pierrent-service" target="_blank"><i class="fab fa-linkedin fa-2x"></i></a>
       </div>
     </section>
   </main>
 
   <footer>
     <p>&copy; 2025 PierreNt Service. Tous droits réservés.</p>
-    <p>Email : pierrentumba17@gmail.com |
+    <p>Email : pierrentumba17@gmail.com | Tel : +243 814 248 644</p>
+  </footer>
+
+  <script>
+    function showGallery(type, count) {
+      const gallery = document.getElementById("gallery");
+      gallery.innerHTML = "";
+
+      for (let i = 1; i <= count; i++) {
+        const img = document.createElement("img");
+        img.src = `${type}/${type}${i}.jpg`; // Ex: atelier/atelier1.jpg
+        img.alt = `${type} ${i}`;
+        gallery.appendChild(img);
+      }
+    }
+  </script>
+</body>
+</html>
