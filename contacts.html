@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PierreNt Service – ACCUEIL</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="value.jpg" type="image/png">
+  <meta name="description" content="PierreNt Service propose des formations numériques, assistance juridique et services bureautiques.">
+  <meta name="keywords" content="formation, numérique, juridique, bureautique, PierreNt, Congo">
+  <meta name="author" content="Pierre Ntumba">
+
+</head>
+<a href="#" class="btn-retour" title="Retour en haut">&#8679;</a>
+<script>
+  const btnRetour = document.querySelector('.btn-retour');
+
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 200) {
+      btnRetour.style.display = 'block';
+    } else {
+      btnRetour.style.display = 'none';
+    }
+  });
+</script>
+<a href="https://wa.me/243814248644" class="whatsapp-float" target="_blank" title="Chattez avec nous sur WhatsApp">
+  <img src="https://img.icons8.com/color/48/000000/whatsapp--v1.png" alt="WhatsApp">
+</a>
+<link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+
+<body>
+  <header>
+    <img src="value.jpg" alt="Logo PierreNt Service" style="height: 50px; vertical-align: middle;">
+    <nav>
+      <ul>
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="about.html">À propos</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="projets.html">Projets</a></li>
+        <li><a href="contacts.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+<main>
+  <section id="contact" class="contact-section">
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+  <h2>Contactez-nous</h2>
+  <form action="mailto:pierrentumba17@gmail.com" method="POST" enctype="text/plain">
+    <label for="name">Nom :</label>
+    <input type="text" id="name" name="Nom" required>
+
+    <label for="email">Email :</label>
+    <input type="email" id="email" name="Email" required>
+
+    <label for="subject">Sujet :</label>
+    <input type="text" id="subject" name="Sujet" required>
+
+    <label for="message">Message :</label>
+    <textarea id="message" name="Message" rows="6" required></textarea>
+
+    <button type="submit">Envoyer</button>
+  </form>
+  <div style="text-align:center; margin-top: 40px;">
+  <h3>Nous trouver :</h3>
+  <iframe
+    src="https://www.google.com/maps?q=264+Avenue+Yolo,+Kinshasa,+RDC&output=embed"
+    width="100%"
+    height="300"
+    style="border:0; border-radius: 10px;"
+    allowfullscreen=""
+    loading="lazy">
+  </iframe>
+</div>
+</section>
+<section id="temoignages" data-aos="fade-up">
+  <h2 style="text-align: center;">Témoignages de nos clients</h2>
+  <div class="temoignages-container">
+    <div class="temoignage">
+      <p>"Merci à PierreNt Service pour la qualité de la formation en bureautique. J'ai trouvé un emploi !"</p>
+      <strong>- Marie, Kinshasa</strong>
+    </div>
+    <div class="temoignage">
+      <p>"Leur assistance juridique m’a permis de mieux gérer ma société."</p>
+      <strong>- Jean-Paul, Goma</strong>
+    </div>
+  </div>
+</section>
+
+</main>
+
+  <footer>
+  <p>&copy; 2025 PierreNt Service. Tous droits réservés.</p>
+  <p>Email : pierrentumba17@gmail.com | Tel : +243 814 248 644</p>
+  </footer>
+</body>
+</html>
+
+
