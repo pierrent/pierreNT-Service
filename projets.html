@@ -7,91 +7,45 @@
   <link rel="stylesheet" href="style.css" />
   <link rel="icon" href="value.jpg" type="image/png">
   <style>
-    header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
+    /* Style résumé (tu peux garder ton CSS existant) */
+    .galerie-buttons {
+      text-align: center;
+      margin: 20px 0;
+    }
+
+    .galerie-buttons button {
       padding: 10px 20px;
-      background-color: #0056b3; /* bleu ONU/UNICEF */
+      margin: 5px;
+      font-size: 16px;
+      cursor: pointer;
+      border-radius: 5px;
+      border: none;
+      background-color: #0056b3;
       color: white;
-      position: relative;
-      z-index: 2;
     }
 
-    nav ul {
-      list-style: none;
-      display: flex;
-      gap: 15px;
-      margin: 0;
-      padding: 0;
+    .galerie-buttons button:hover {
+      background-color: #003d80;
     }
 
-    nav ul li a {
-      text-decoration: none;
-      color: white;
-      font-weight: bold;
-    }
-
-    nav ul li a:hover {
-      text-decoration: underline;
-    }
-
-    header img {
-      height: 50px;
-    }
-
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-    }
-
-    section {
-      padding: 20px;
-    }
-
-    .activities {
+    #gallery {
       display: flex;
       flex-wrap: wrap;
-      gap: 20px;
+      gap: 15px;
       justify-content: center;
+      padding: 10px;
     }
 
-    .activities img {
-      width: 300px;
+    #gallery img {
+      width: 220px;
       height: auto;
       border-radius: 10px;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     }
-
-    footer {
-      background: #222;
-      color: white;
-      padding: 15px;
-      text-align: center;
-    }
   </style>
-  <meta name="description" content="PierreNt Service propose des formations numériques, assistance juridique et services bureautiques.">
-  <meta name="keywords" content="formation, numérique, juridique, bureautique, PierreNt, Congo">
-  <meta name="author" content="Pierre Ntumba">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
 </head>
-<a href="#" class="btn-retour" title="Retour en haut">&#8679;</a>
-<script>
-  const btnRetour = document.querySelector('.btn-retour');
 
-  window.addEventListener('scroll', () => {
-    if (window.scrollY > 200) {
-      btnRetour.style.display = 'block';
-    } else {
-      btnRetour.style.display = 'none';
-    }
-  });
-</script>
-<!-- HTML -->
-<div id="galerie" class="galerie"></div>
 <body>
-
   <header>
     <img src="value.jpg" alt="Logo PierreNt Service" />
     <nav>
@@ -104,85 +58,38 @@
       </ul>
     </nav>
   </header>
- <main>
-  <section>
-    <h2>À propos de nous</h2>
-    <p>
-      PierreNt Service est une entreprise spécialisée dans le renforcément de
-      capacité avec des formations en informatique (bureautique, digital numérique,
-      conception et programmation), gestion et création des projets, gestion du personnel,
-      offre aussi des services d'assistance juridique et les services bureautiques.
-    </p>
-    <p>
-      Notre mission est d'Apporter des solutions concrètes et accessibles pour renforcer
-      les compétences, faciliter les démarches administratives et offrir un
-      accompagnement juridique fiable. Nous croyons que la connaissance,
-      l'organisation et l'encadrement sont les clés de l'autonomie et du progrès.
-    </p>
-  </section>
-  </section>
-  <section id="realisations" data-aos="zoom-in">
-  <section id="galerie">
-  <h2>Nos Réalisations</h2>
-<script>
-function chargerImages(dossier, count) {
-  const container = document.querySelector('.galerie');
-  for (let i = 1; i <= count; i++) {
-    const img = document.createElement('img');
-    img.src = `${dossier}/${dossier}${i}.jpg`; // ex: "images/images1.jpg"
-    img.alt = `${dossier} ${i}`;
-    container.appendChild(img);
-  }
-}
-chargerImages('atelier', 10);
-chargerImages('seminaire', 4);
-chargerImages('formation', 4);
-<div class="gallery-buttons" style="text-align: center; margin-bottom: 20px;">
-  <button onclick="showGallery('atelier')">📸 Atelier</button>
-  <button onclick="showGallery('seminaire')">🎓 Séminaire</button>
-  <button onclick="showGallery('formation')">💼 Formation</button>
-</div>
 
-<div id="gallery" style="display: flex; flex-wrap: wrap; gap: 10px; justify-content: center;"></div>
+  <main>
+    <section>
+      <h2>À propos de nous</h2>
+      <p>PierreNt Service est une entreprise spécialisée dans... (ton texte)</p>
+    </section>
 
-  
-</section>
-  <section>
-<section id="reseaux-sociaux">
-  <h2>Retrouvons-nous sur les réseaux</h2>
-  <div class="social-icons">
-    <a href="https://web.facebook.com/carichoix" target="_blank">
-      <i class="fab fa-facebook fa-2x"></i>
-    </a>
-    <a href="https://www.linkedin.com/company/pierrent-service" target="_blank">
-      <i class="fab fa-linkedin fa-2x"></i>
-    </a>
-  </div>
-</section>
-<script>
-function showGallery(type) {
-  const gallery = document.getElementById("gallery");
-  gallery.innerHTML = ""; 
+    <section id="galerie">
+      <h2>Nos Réalisations</h2>
 
-  for (let i = 1; i <= 6; i++) {
-    const img = document.createElement("img");
-    img.src = `${type}/${type}${i}.jpg`; 
-    img.alt = `${type} image ${i}`;
-    img.style.width = "200px";
-    img.style.height = "auto";
-    img.style.borderRadius = "10px";
-    img.style.boxShadow = "0 2px 8px rgba(0,0,0,0.2)";
-    gallery.appendChild(img);
-  }
-}
-</script>
+      <div class="galerie-buttons">
+        <button onclick="showGallery('atelier', 10)">📸 Atelier</button>
+        <button onclick="showGallery('seminaire', 4)">🎓 Séminaire</button>
+        <button onclick="showGallery('formation', 4)">💼 Formation</button>
+      </div>
 
- </main>
- <footer>
-  <p>&copy; 2025 PierreNt Service. Tous droits réservés.</p>
-  <p>Email : pierrentumba17@gmail.com | Tel : +243 814 248 644</p>
- </footer>
+      <div id="gallery"></div>
+    </section>
 
+    <section id="reseaux-sociaux">
+      <h2>Retrouvons-nous sur les réseaux</h2>
+      <div class="social-icons">
+        <a href="https://web.facebook.com/carichoix" target="_blank">
+          <i class="fab fa-facebook fa-2x"></i>
+        </a>
+        <a href="https://www.linkedin.com/company/pierrent-service" target="_blank">
+          <i class="fab fa-linkedin fa-2x"></i>
+        </a>
+      </div>
+    </section>
+  </main>
 
-</body>
-</html>
+  <footer>
+    <p>&copy; 2025 PierreNt Service. Tous droits réservés.</p>
+    <p>Email : pierrentumba17@gmail.com |
