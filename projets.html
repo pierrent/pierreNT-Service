@@ -88,22 +88,23 @@
     }
   });
 </script>
+<!-- HTML -->
+<div id="galerie" class="galerie"></div>
+
 <script>
-function chargerImages(/pierrent-service, count) {
-  const container = pierrent-service.querySelector(`#${/pierrent-service} .galerie`);
+function chargerImages(dossier, count) {
+  const container = document.querySelector('.galerie');
   for (let i = 1; i <= count; i++) {
-    const img = pierrent-service/images/.createElement('img');
-    img.src = `${pierrent-service}/${pierrent-service}${i}.jpg`;
-    img.alt = `${pierrent-service} ${i}`;
+    const img = document.createElement('img');
+    img.src = `${dossier}/${dossier}${i}.jpg`; // ex: "images/images1.jpg"
+    img.alt = `${dossier} ${i}`;
     container.appendChild(img);
   }
 }
-
-chargerImages("atelier", 10);
-chargerImages("seminaire", 4);
-chargerImages("formation", 4);
+chargerImages('atelier', 10);
+chargerImages('seminaire', 4);
+chargerImages('formation', 4);
 </script>
-
 <body>
 
   <header>
